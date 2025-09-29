@@ -28,6 +28,7 @@ python -m http.server 8080
 ## Domínio (simulação)
 Provedores: Hostinger  
 Endereço URL: https://www.vittaagenda.com.br
+<img src="dominio.png" alt="Minha imagem legal" />
 
 ## Não implementado (próximos passos)
 - Multiusuário e autenticação
