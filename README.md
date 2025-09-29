@@ -3,6 +3,9 @@
 Sistema de agendamento de consultas para clínicas e consultórios, desenvolvido como projeto acadêmico com deploy no **GitHub** e **Vercel**.  
 O objetivo é demonstrar um sistema simples e funcional para gestão de atendimentos.
 
+**Deploy no Vercel:** <br />
+https://vittaagenda.vercel.app/
+
 ---
 
 ## ✅ Requisitos e Funcionalidades
