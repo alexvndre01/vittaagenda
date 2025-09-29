@@ -19,7 +19,7 @@ O sistema permite **cadastrar, editar e excluir** consultas, além de **filtrar*
 
 ## Como rodar localmente
 ```bash
-git clone https://github.com/SEU-USUARIO/vittaagenda.git
+git clone https://github.com/alexvndre01/vittaagenda.git
 cd vittaagenda
 # abra index.html ou rode um servidor local (opcional):
 python -m http.server 8080
