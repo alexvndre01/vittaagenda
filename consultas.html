@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VittaAgenda — Consultas</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.svg" />
+</head>
+<body>
+  <header class="container">
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="VittaAgenda" class="logo" />
+        <span>VittaAgenda</span>
+      </a>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="hamburger" for="menu-toggle">☰</label>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="consultas.html" class="active">Consultas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <div>
+        <h1>Consultas</h1>
+        <p class="muted">Cadastre e gerencie os atendimentos da clínica.</p>
+      </div>
+      <div class="toolbar-actions">
+        <button class="btn" id="btnAdd">Nova consulta</button>
+      </div>
+    </section>
+
+    <section class="filters card">
+      <div class="grid">
+        <label>Buscar
+          <input id="search" type="search" placeholder="Paciente, serviço ou status..." />
+        </label>
+        <label>Status
+          <select id="status">
+            <option value="">Todos</option>
+            <option value="Confirmada">Confirmada</option>
+            <option value="Pendente">Pendente</option>
+            <option value="Cancelada">Cancelada</option>
+          </select>
+        </label>
+        <label>Data
+          <input id="date" type="date" />
+        </label>
+        <label>&nbsp;
+          <button class="btn secondary" id="btnClear" type="button">Limpar filtros</button>
+        </label>
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Paciente</th>
+            <th>Serviço</th>
+            <th>Status</th>
+            <th style="width:140px">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <p id="empty" class="muted" hidden>Nenhum resultado encontrado.</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> VittaAgenda — Agenda para clínicas</p>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modalTitle">Nova consulta</h3>
+        <button class="icon" id="modalClose" aria-label="Fechar">✕</button>
+      </div>
+      <form id="formConsulta" class="grid">
+        <input type="hidden" id="id" />
+        <label>Data
+          <input type="date" id="data" required />
+        </label>
+        <label>Hora
+          <input type="time" id="hora" required />
+        </label>
+        <label>Paciente
+          <input type="text" id="paciente" placeholder="Nome do paciente" required />
+        </label>
+        <label>Serviço
+          <input type="text" id="servico" placeholder="Ex.: Clínica Geral" required />
+        </label>
+        <label>Status
+          <select id="statusInput" required>
+            <option>Confirmada</option>
+            <option>Pendente</option>
+            <option>Cancelada</option>
+          </select>
+        </label>
+        <div class="form-actions">
+          <button class="btn secondary" type="button" id="btnCancel">Cancelar</button>
+          <button class="btn" type="submit" id="btnSave">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

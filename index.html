@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VittaAgenda — Início</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.svg" />
+</head>
+<body>
+  <header class="container">
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="VittaAgenda" class="logo" />
+        <span>VittaAgenda</span>
+      </a>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="hamburger" for="menu-toggle">☰</label>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="consultas.html">Consultas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Organize seus atendimentos com rapidez e clareza.</h1>
+      <p>Uma agenda de consultas pensada para clínicas e consultórios. Cadastre atendimentos, filtre por status e mantenha o dia a dia organizado.</p>
+      <a class="btn" href="consultas.html">Abrir Agenda</a>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>Agenda prática</h3>
+        <p>Visualize rapidamente o dia, filtre por paciente, serviço e status.</p>
+      </article>
+      <article class="card">
+        <h3>Cadastro rápido</h3>
+        <p>Inclua, edite ou cancele consultas em poucos cliques.</p>
+      </article>
+      <article class="card">
+        <h3>Sempre disponível</h3>
+        <p>Acesse de qualquer dispositivo com o link da sua implantação.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> VittaAgenda — Agenda para clínicas</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

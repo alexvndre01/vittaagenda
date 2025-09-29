@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VittaAgenda — Contato</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.svg" />
+</head>
+<body>
+  <header class="container">
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="VittaAgenda" class="logo" />
+        <span>VittaAgenda</span>
+      </a>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="hamburger" for="menu-toggle">☰</label>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="consultas.html">Consultas</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero small">
+      <h1>Fale com a equipe</h1>
+      <p>Envie dúvidas e sugestões. Retornaremos em breve.</p>
+    </section>
+
+    <section class="form-card card">
+      <form id="formContato">
+        <div class="grid">
+          <label>Nome
+            <input name="nome" type="text" required placeholder="Seu nome" />
+          </label>
+          <label>E-mail
+            <input name="email" type="email" required placeholder="voce@email.com" />
+          </label>
+        </div>
+        <label>Assunto
+          <input name="assunto" type="text" required placeholder="Assunto da mensagem" />
+        </label>
+        <label>Mensagem
+          <textarea name="mensagem" rows="5" required placeholder="Escreva sua mensagem..."></textarea>
+        </label>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+      <p id="contatoOk" class="success" hidden>Mensagem enviada! Em breve entraremos em contato.</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> VittaAgenda — Agenda para clínicas</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById('formContato').addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.target.reset();
+      document.getElementById('contatoOk').hidden = false;
+      setTimeout(() => document.getElementById('contatoOk').hidden = true, 4000);
+    });
+  </script>
+</body>
+</html>
